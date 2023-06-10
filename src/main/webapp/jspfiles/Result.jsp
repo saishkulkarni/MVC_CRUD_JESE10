@@ -11,6 +11,7 @@
 <title>Result</title>
 </head>
 <body>
+<h1 style="color:green">${success }</h1>
 <table border="1">
 <tr>
 <th>ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>Gender</th><th>DoB</th><th>Age</th><th>Delete</th><th>Edit</th>
@@ -19,7 +20,7 @@
 <c:forEach var="s" items="${list}">
 
 <tr>
-<th>${s.getId()}</th><th>${s.getName()}</th><th>${s.getEmail()}</th><th>${s.getMobile()}</th><th>${s.getGender()}</th><th>${s.getDob()}</th><th>${s.getAge()}</th><th><a href="delete?id=${s.getId()}"><button>Delete</button></a></th><th><a><button>Edit</button></a></th>
+<th>${s.getId()}</th><th>${s.getName()}</th><th>${s.getEmail()}</th><th>${s.getMobile()}</th><th>${s.getGender()}</th><th>${s.getDob()}</th><th>${s.getAge()}</th><th><a href="delete?id=${s.getId()}"><button>Delete</button></a></th><th><a href="edit?id=${s.getId()}"><button>Edit</button></a></th>
 </tr>
 
 </c:forEach>

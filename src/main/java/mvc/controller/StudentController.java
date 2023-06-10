@@ -27,4 +27,27 @@ public class StudentController {
 	{
 		return service.fetchAll();
 	}
+	
+	@PostMapping("fetchbyname")
+	public ModelAndView fetchByName(@RequestParam String name)
+	{
+		return service.fetchByName(name);
+	}
+	
+	@GetMapping("delete")
+	public ModelAndView delete(@RequestParam int id)
+	{
+		return service.delete(id);
+	}
+	
+	@GetMapping("edit")
+	public ModelAndView edit(@RequestParam int id)
+	{
+		return service.edit(id);
+	}
+	
+	@PostMapping("update")
+	public ModelAndView update(@ModelAttribute Student student,@RequestParam String date) {
+		return service.update(student,date);
+	}
 }
